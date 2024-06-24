@@ -1,0 +1,127 @@
+|mainVGA
+reset => SYNC_signal:VGAHS.reset
+reset => SYNC_signal:VGAVS.reset
+clk => clk_div:clockdiv.clk
+VGA_HS <= VGA_HS.DB_MAX_OUTPUT_PORT_TYPE
+VGA_VS <= VGA_VS.DB_MAX_OUTPUT_PORT_TYPE
+VGA_BLANK_HS <= VGA_BLANK_HS.DB_MAX_OUTPUT_PORT_TYPE
+VGA_BLANK_VS <= VGA_BLANK_VS.DB_MAX_OUTPUT_PORT_TYPE
+VGA_SYNC <= <VCC>
+VGA_CLK <= clk_div:clockdiv.clkOut
+
+
+|mainVGA|clk_div:clockdiv
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clkOut <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainVGA|SYNC_signal:VGAHS
+clk => enable_out_2~reg0.CLK
+clk => enable_out_1~reg0.CLK
+clk => CNT_END.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk => cnt[21].CLK
+clk => cnt[22].CLK
+clk => cnt[23].CLK
+clk => cnt[24].CLK
+clk => cnt[25].CLK
+clk => cnt[26].CLK
+clk => cnt[27].CLK
+clk => cnt[28].CLK
+clk => cnt[29].CLK
+clk => cnt[30].CLK
+clk => cnt[31].CLK
+clk => state~1.DATAIN
+reset => process_2.IN0
+reset => state~3.DATAIN
+enable_in => process_2.IN0
+enable_in => state.D_state.OUTPUTSELECT
+enable_in => state.C_state.OUTPUTSELECT
+enable_in => state.B_state.OUTPUTSELECT
+enable_in => state.A_state.OUTPUTSELECT
+enable_in => state.reset_state.OUTPUTSELECT
+enable_out_1 <= enable_out_1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enable_out_2 <= enable_out_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+VGA_sync <= VGA_sync.DB_MAX_OUTPUT_PORT_TYPE
+VGA_blank <= VGA_blank.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainVGA|SYNC_signal:VGAVS
+clk => enable_out_2~reg0.CLK
+clk => enable_out_1~reg0.CLK
+clk => CNT_END.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk => cnt[21].CLK
+clk => cnt[22].CLK
+clk => cnt[23].CLK
+clk => cnt[24].CLK
+clk => cnt[25].CLK
+clk => cnt[26].CLK
+clk => cnt[27].CLK
+clk => cnt[28].CLK
+clk => cnt[29].CLK
+clk => cnt[30].CLK
+clk => cnt[31].CLK
+clk => state~1.DATAIN
+reset => process_2.IN0
+reset => state~3.DATAIN
+enable_in => process_2.IN0
+enable_in => state.D_state.OUTPUTSELECT
+enable_in => state.C_state.OUTPUTSELECT
+enable_in => state.B_state.OUTPUTSELECT
+enable_in => state.A_state.OUTPUTSELECT
+enable_in => state.reset_state.OUTPUTSELECT
+enable_out_1 <= enable_out_1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enable_out_2 <= enable_out_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+VGA_sync <= VGA_sync.DB_MAX_OUTPUT_PORT_TYPE
+VGA_blank <= VGA_blank.DB_MAX_OUTPUT_PORT_TYPE
+
+

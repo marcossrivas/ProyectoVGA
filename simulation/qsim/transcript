@@ -1,0 +1,66 @@
+# do ProyectoVGA.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mainVGA
+# 
+# Top level modules:
+# 	mainVGA
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mainVGA_vlg_sample_tst
+# -- Compiling module mainVGA_vlg_check_tst
+# -- Compiling module mainVGA_vlg_vec_tst
+# 
+# Top level modules:
+# 	mainVGA_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.mainVGA_vlg_vec_tst 
+# Loading work.mainVGA_vlg_vec_tst
+# Loading work.mainVGA
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading work.mainVGA_vlg_sample_tst
+# Loading work.mainVGA_vlg_check_tst
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from ProyectoVGA_v.sdo
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading timing data from ProyectoVGA_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /mainVGA_vlg_vec_tst File: ProyectoVGA.vt
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: marco  Hostname: DESKTOP-79R8E43  ProcessID: 7544
+# 
+#           Attempting to use alternate WLF file "./wlft0kv9ac".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft0kv9ac
+# 
+# ERROR! Vector Mismatch for output port VGA_HS :: @time = 1000000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port VGA_SYNC :: @time = 1000000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port VGA_VS :: @time = 1000000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port VGA_CLK :: @time = 1005000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port VGA_BLANK_HS :: @time = 1030000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port VGA_BLANK_VS :: @time = 8210000.000 ps
+#      Expected value = 0
+#      Real value = 1
+#           6 mismatched vectors : Simulation failed !
+# ** Note: $finish    : ProyectoVGA.vt(291)
+#    Time: 10 us  Iteration: 0  Instance: /mainVGA_vlg_vec_tst/tb_out

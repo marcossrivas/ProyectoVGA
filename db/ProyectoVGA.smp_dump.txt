@@ -1,0 +1,16 @@
+
+State Machine - |mainVGA|SYNC_signal:VGAVS|state
+Name state.D_state state.C_state state.B_state state.A_state state.reset_state 
+state.reset_state 0 0 0 0 0 
+state.A_state 0 0 0 1 1 
+state.B_state 0 0 1 0 1 
+state.C_state 0 1 0 0 1 
+state.D_state 1 0 0 0 1 
+
+State Machine - |mainVGA|SYNC_signal:VGAHS|state
+Name state.D_state state.C_state state.B_state state.A_state state.reset_state 
+state.reset_state 0 0 0 0 0 
+state.A_state 0 0 0 1 1 
+state.B_state 0 0 1 0 1 
+state.C_state 0 1 0 0 1 
+state.D_state 1 0 0 0 1 

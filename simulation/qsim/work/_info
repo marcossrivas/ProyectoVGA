@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\marco\Desktop\ProyectoVGA\simulation\qsim
+vmainVGA
+Z1 INJHFdoHEm9a4fGdca;CUG3
+Z2 V]LUI?Olejg593Z=5ifHeA2
+Z3 dC:\Users\marco\Desktop\ProyectoVGA\simulation\qsim
+Z4 w1719181612
+Z5 8ProyectoVGA.vo
+Z6 FProyectoVGA.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|ProyectoVGA.vo|
+Z9 o-work work -O0
+Z10 nmain@v@g@a
+!i10b 1
+Z11 !s100 K?Ga;D<C:JVU?g8nEM:Q>1
+!s85 0
+Z12 !s108 1719181616.909000
+Z13 !s107 ProyectoVGA.vo|
+!s101 -O0
+vmainVGA_vlg_check_tst
+!i10b 1
+Z14 !s100 e5VV`fj@aBg]g`?Bh]j]B0
+Z15 I2]ZY7;D^CULDX2LBH=Ofa0
+Z16 VokJSL5HV5G^]5PQg`DOBe2
+R3
+Z17 w1719181609
+Z18 8ProyectoVGA.vt
+Z19 FProyectoVGA.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z20 !s108 1719181617.175000
+Z21 !s107 ProyectoVGA.vt|
+Z22 !s90 -work|work|ProyectoVGA.vt|
+!s101 -O0
+R9
+Z23 nmain@v@g@a_vlg_check_tst
+vmainVGA_vlg_sample_tst
+!i10b 1
+Z24 !s100 6=_dE<bdCHLSg2KXIWbM12
+Z25 IO6I6^`G<L0^S?hP_NNgHA2
+Z26 VVkbN@AM0M@kXLPYUf<ibd3
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 nmain@v@g@a_vlg_sample_tst
+vmainVGA_vlg_vec_tst
+!i10b 1
+Z28 !s100 EWU`ni_:e:X]8?UHA<h3>1
+Z29 Ib6[5R;EC?mOj0KQ`N]gNX1
+Z30 VYi@VCNM3amGiKWzeTLGNP1
+R3
+R17
+R18
+R19
+Z31 L0 295
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 nmain@v@g@a_vlg_vec_tst
+vSYNC_signal
+Z33 I`Yom[Jn^L8kO^iM3e>8PM0
+Z34 VLF7T5e=E>X4;d=G=9WZlD2
+R3
+Z35 w1719156061
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z36 n@s@y@n@c_signal
+Z37 !s100 JEnj>Ik[S^Lm3MjD606On1
+Z38 !s108 1719156063.756000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vSYNC_signal_vlg_check_tst
+Z39 !s100 hTIkGmo[ejigDcPzZcM>Z1
+Z40 IAVA`AS`LHmO5T93Bi5`;z2
+Z41 VBN>8dWG2M@[iS[S@n8P?i2
+R3
+Z42 w1719156058
+R18
+R19
+L0 61
+R7
+r1
+31
+Z43 !s108 1719156064.041000
+Z44 !s107 ProyectoVGA.vt|
+R22
+R9
+Z45 n@s@y@n@c_signal_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vSYNC_signal_vlg_sample_tst
+Z46 !s100 Nia3b_1VHNoIA=SOBjePU3
+Z47 Ig8M^iYdQ;GoHfm<3=g?;z2
+Z48 VgndCmR_?;OI;XIDA::C0>3
+R3
+R42
+R18
+R19
+L0 29
+R7
+r1
+31
+R43
+R44
+R22
+R9
+Z49 n@s@y@n@c_signal_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vSYNC_signal_vlg_vec_tst
+Z50 !s100 aGBe;jCA5BGhT97lzeHLa0
+Z51 I86G576EFKd^VHlFcAiNnz1
+Z52 Vg_DQ4ZR3B2Ib[ZCoN`O`K0
+R3
+R42
+R18
+R19
+Z53 L0 821
+R7
+r1
+31
+R43
+R44
+R22
+R9
+Z54 n@s@y@n@c_signal_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0

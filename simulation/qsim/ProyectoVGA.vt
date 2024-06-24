@@ -1,0 +1,355 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/23/2024 19:26:49"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    mainVGA
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module mainVGA_vlg_sample_tst(
+	clk,
+	reset,
+	sampler_tx
+);
+input  clk;
+input  reset;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or reset)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module mainVGA_vlg_check_tst (
+	VGA_BLANK_HS,
+	VGA_BLANK_VS,
+	VGA_CLK,
+	VGA_HS,
+	VGA_SYNC,
+	VGA_VS,
+	sampler_rx
+);
+input  VGA_BLANK_HS;
+input  VGA_BLANK_VS;
+input  VGA_CLK;
+input  VGA_HS;
+input  VGA_SYNC;
+input  VGA_VS;
+input sampler_rx;
+
+reg  VGA_BLANK_HS_expected;
+reg  VGA_BLANK_VS_expected;
+reg  VGA_CLK_expected;
+reg  VGA_HS_expected;
+reg  VGA_SYNC_expected;
+reg  VGA_VS_expected;
+
+reg  VGA_BLANK_HS_prev;
+reg  VGA_BLANK_VS_prev;
+reg  VGA_CLK_prev;
+reg  VGA_HS_prev;
+reg  VGA_SYNC_prev;
+reg  VGA_VS_prev;
+
+reg  VGA_BLANK_HS_expected_prev;
+reg  VGA_BLANK_VS_expected_prev;
+reg  VGA_CLK_expected_prev;
+reg  VGA_HS_expected_prev;
+reg  VGA_SYNC_expected_prev;
+reg  VGA_VS_expected_prev;
+
+reg  last_VGA_BLANK_HS_exp;
+reg  last_VGA_BLANK_VS_exp;
+reg  last_VGA_CLK_exp;
+reg  last_VGA_HS_exp;
+reg  last_VGA_SYNC_exp;
+reg  last_VGA_VS_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:6] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 6'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	VGA_BLANK_HS_prev = VGA_BLANK_HS;
+	VGA_BLANK_VS_prev = VGA_BLANK_VS;
+	VGA_CLK_prev = VGA_CLK;
+	VGA_HS_prev = VGA_HS;
+	VGA_SYNC_prev = VGA_SYNC;
+	VGA_VS_prev = VGA_VS;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	VGA_BLANK_HS_expected_prev = VGA_BLANK_HS_expected;
+	VGA_BLANK_VS_expected_prev = VGA_BLANK_VS_expected;
+	VGA_CLK_expected_prev = VGA_CLK_expected;
+	VGA_HS_expected_prev = VGA_HS_expected;
+	VGA_SYNC_expected_prev = VGA_SYNC_expected;
+	VGA_VS_expected_prev = VGA_VS_expected;
+end
+
+
+
+// expected VGA_BLANK_HS
+initial
+begin
+	VGA_BLANK_HS_expected = 1'bX;
+	VGA_BLANK_HS_expected = #999000 1'b0;
+end 
+
+// expected VGA_BLANK_VS
+initial
+begin
+	VGA_BLANK_VS_expected = 1'bX;
+	VGA_BLANK_VS_expected = #999000 1'b0;
+end 
+
+// expected VGA_CLK
+initial
+begin
+	VGA_CLK_expected = 1'bX;
+	VGA_CLK_expected = #999000 1'b0;
+end 
+
+// expected VGA_HS
+initial
+begin
+	VGA_HS_expected = 1'bX;
+	VGA_HS_expected = #999000 1'b0;
+end 
+
+// expected VGA_SYNC
+initial
+begin
+	VGA_SYNC_expected = 1'bX;
+	VGA_SYNC_expected = #999000 1'b0;
+end 
+
+// expected VGA_VS
+initial
+begin
+	VGA_VS_expected = 1'bX;
+	VGA_VS_expected = #999000 1'b0;
+end 
+// generate trigger
+always @(VGA_BLANK_HS_expected or VGA_BLANK_HS or VGA_BLANK_VS_expected or VGA_BLANK_VS or VGA_CLK_expected or VGA_CLK or VGA_HS_expected or VGA_HS or VGA_SYNC_expected or VGA_SYNC or VGA_VS_expected or VGA_VS)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected VGA_BLANK_HS = %b | expected VGA_BLANK_VS = %b | expected VGA_CLK = %b | expected VGA_HS = %b | expected VGA_SYNC = %b | expected VGA_VS = %b | ",VGA_BLANK_HS_expected_prev,VGA_BLANK_VS_expected_prev,VGA_CLK_expected_prev,VGA_HS_expected_prev,VGA_SYNC_expected_prev,VGA_VS_expected_prev);
+	$display("| real VGA_BLANK_HS = %b | real VGA_BLANK_VS = %b | real VGA_CLK = %b | real VGA_HS = %b | real VGA_SYNC = %b | real VGA_VS = %b | ",VGA_BLANK_HS_prev,VGA_BLANK_VS_prev,VGA_CLK_prev,VGA_HS_prev,VGA_SYNC_prev,VGA_VS_prev);
+`endif
+	if (
+		( VGA_BLANK_HS_expected_prev !== 1'bx ) && ( VGA_BLANK_HS_prev !== VGA_BLANK_HS_expected_prev )
+		&& ((VGA_BLANK_HS_expected_prev !== last_VGA_BLANK_HS_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port VGA_BLANK_HS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", VGA_BLANK_HS_expected_prev);
+		$display ("     Real value = %b", VGA_BLANK_HS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_VGA_BLANK_HS_exp = VGA_BLANK_HS_expected_prev;
+	end
+	if (
+		( VGA_BLANK_VS_expected_prev !== 1'bx ) && ( VGA_BLANK_VS_prev !== VGA_BLANK_VS_expected_prev )
+		&& ((VGA_BLANK_VS_expected_prev !== last_VGA_BLANK_VS_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port VGA_BLANK_VS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", VGA_BLANK_VS_expected_prev);
+		$display ("     Real value = %b", VGA_BLANK_VS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_VGA_BLANK_VS_exp = VGA_BLANK_VS_expected_prev;
+	end
+	if (
+		( VGA_CLK_expected_prev !== 1'bx ) && ( VGA_CLK_prev !== VGA_CLK_expected_prev )
+		&& ((VGA_CLK_expected_prev !== last_VGA_CLK_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port VGA_CLK :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", VGA_CLK_expected_prev);
+		$display ("     Real value = %b", VGA_CLK_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_VGA_CLK_exp = VGA_CLK_expected_prev;
+	end
+	if (
+		( VGA_HS_expected_prev !== 1'bx ) && ( VGA_HS_prev !== VGA_HS_expected_prev )
+		&& ((VGA_HS_expected_prev !== last_VGA_HS_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port VGA_HS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", VGA_HS_expected_prev);
+		$display ("     Real value = %b", VGA_HS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_VGA_HS_exp = VGA_HS_expected_prev;
+	end
+	if (
+		( VGA_SYNC_expected_prev !== 1'bx ) && ( VGA_SYNC_prev !== VGA_SYNC_expected_prev )
+		&& ((VGA_SYNC_expected_prev !== last_VGA_SYNC_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port VGA_SYNC :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", VGA_SYNC_expected_prev);
+		$display ("     Real value = %b", VGA_SYNC_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_VGA_SYNC_exp = VGA_SYNC_expected_prev;
+	end
+	if (
+		( VGA_VS_expected_prev !== 1'bx ) && ( VGA_VS_prev !== VGA_VS_expected_prev )
+		&& ((VGA_VS_expected_prev !== last_VGA_VS_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port VGA_VS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", VGA_VS_expected_prev);
+		$display ("     Real value = %b", VGA_VS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_VGA_VS_exp = VGA_VS_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#10000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module mainVGA_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg reset;
+// wires                                               
+wire VGA_BLANK_HS;
+wire VGA_BLANK_VS;
+wire VGA_CLK;
+wire VGA_HS;
+wire VGA_SYNC;
+wire VGA_VS;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+mainVGA i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.reset(reset),
+	.VGA_BLANK_HS(VGA_BLANK_HS),
+	.VGA_BLANK_VS(VGA_BLANK_VS),
+	.VGA_CLK(VGA_CLK),
+	.VGA_HS(VGA_HS),
+	.VGA_SYNC(VGA_SYNC),
+	.VGA_VS(VGA_VS)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b1;
+	reset = #10000 1'b0;
+	reset = #20000 1'b1;
+end 
+
+mainVGA_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.reset(reset),
+	.sampler_tx(sampler)
+);
+
+mainVGA_vlg_check_tst tb_out(
+	.VGA_BLANK_HS(VGA_BLANK_HS),
+	.VGA_BLANK_VS(VGA_BLANK_VS),
+	.VGA_CLK(VGA_CLK),
+	.VGA_HS(VGA_HS),
+	.VGA_SYNC(VGA_SYNC),
+	.VGA_VS(VGA_VS),
+	.sampler_rx(sampler)
+);
+endmodule
+
